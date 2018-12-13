@@ -38,6 +38,7 @@ gulp.task('scripts', () => {
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.babel())
+    .pipe($.browserify({ insertGlobals: true, debug: true }))
     .pipe($.concat('app.js'))
     .pipe($.uglify())
     .pipe($.sourcemaps.write(paths.target.sourcemaps))
