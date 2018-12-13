@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Feedback</title>
+    <link href="dist/css/app.css" rel="stylesheet">
+</head>
+<body>
+    <h2>Hello World!!!</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Rating</th>
+                <th>Comment</th>
+                <th>Browser</th>
+                <th>Device</th>
+                <th>Platform</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody id="content-loop">
+        </tbody>
+    </table>
+    <template id="row-template">
+        <tr>
+            <td>{{rating}}</td>
+            <td>{{comment}}</td>
+            <td>{{browser}}</td>
+            <td>{{device}}</td>
+            <td>{{platform}}</td>
+            <td>{{location}}</td>
+        </tr>
+    </template>
+    <script src="dist/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+"use strict";var _interopRequireDefault=require("@babel/runtime/helpers/interopRequireDefault"),_handlebars=_interopRequireDefault(require("handlebars")),source=document.getElementById("row-template"),template=_handlebars.default.compile(source),context={rating:1,comment:"jnjfnjxfmncszcnvjm",browser:"Chrome",device:"Desktop",platform:"macOS",location:"Nigeria"},html=template(context),contentLoop=document.getElementById("content-loop");contentLoop.innerHTML=html;
+//# sourceMappingURL=maps/app.js.map
