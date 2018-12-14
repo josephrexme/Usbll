@@ -1,7 +1,8 @@
-import Handlebars from 'handlebars';
+// import Handlebars from 'handlebars';
+const Handlebars = require('handlebars');
 
 
-const source = document.getElementById('row-template');
+const source = document.getElementById('row-template').innerHTML;
 const template = Handlebars.compile(source);
 const context = {
     rating: 1,
