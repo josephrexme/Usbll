@@ -3,9 +3,11 @@
     "start": "gulp",
     "build": "gulp build",
     "styles": "gulp styles",
-    "scripts": "gulp scripts"
+    "scripts": "gulp scripts",
+    "test": "mocha --compilers js:babel-core"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-core": "^7.0.0-bridge.0",
     "gulp-babel": "^8.0.0",
     "handlebars": "^4.0.12"
@@ -14,6 +16,7 @@
     "@babel/core": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
+    "@babel/runtime": "^7.2.0",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.26.3",
     "chai": "^4.2.0",
