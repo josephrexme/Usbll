@@ -1,15 +1,6 @@
 import Handlebars from 'handlebars';
 import axios from 'axios';
-
-export const getDevice = resolution => {
-    let device = 'Mobile';
-    if(resolution >= 1024) {
-        device = 'Desktop'
-    } else if(resolution >= 720) {
-        device = 'Tablet'
-    }
-    return device;
-};
+import { getDevice } from './helpers';
 
 (async function (){
     let html;
@@ -21,8 +12,7 @@ export const getDevice = resolution => {
     const ratingEntries = document.querySelectorAll('[id^="rating"]');
 
     const template = Handlebars.compile(source);
-    
-    
+
     const feedback = await axios.get(url);
 
     const { data: { items } } = feedback;
@@ -59,7 +49,7 @@ export const getDevice = resolution => {
         entry.addEventListener('click', event => {
             let context;
             const element = event.target;
-            
+
             element.classList.toggle('selected');
             const selectedElements = document.querySelectorAll('.selected');
 
@@ -79,12 +69,11 @@ export const getDevice = resolution => {
                     items: myItems
                 }
             }
-            
+
             html = template(context);
             contentLoop.innerHTML = html;
         })
     })
-    // module.exports = { template };
 }());
 
 
